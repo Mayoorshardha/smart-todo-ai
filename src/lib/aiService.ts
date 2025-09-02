@@ -1,7 +1,8 @@
 import type { AIServiceInterface, AICategorizationResult, AISuggestionsResult, UserProfile, SuggestionContext } from '../types';
 
-// Use local server proxy to avoid CORS issues
-const CLAUDE_API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api/claude';
+// Use different endpoints for development vs production
+const CLAUDE_API_URL = import.meta.env.VITE_API_URL ||
+  (import.meta.env.PROD ? '/api/claude' : 'http://localhost:3001/api/claude');
 
 export class AIService implements AIServiceInterface {
   private apiKey: string;

@@ -14,7 +14,9 @@ A modern, AI-powered todo application built with React, TypeScript, and Claude A
 
 ## 🚀 Live Demo
 
-[View Live Demo](https://your-app-name.vercel.app) (Deploy link will be added after deployment)
+[Deploy to Vercel in 2 minutes](https://vercel.com/new/clone?repository-url=https://github.com/Mayoorshardha/smart-todo-ai) 
+
+*Click the button above to deploy your own instance instantly!*
 
 ## 📸 Screenshots
 
@@ -75,9 +77,11 @@ A modern, AI-powered todo application built with React, TypeScript, and Claude A
    - Create an API key
    - Add it in the app interface
 
-### Why Two Servers?
+### Development vs Production
 
-The app uses a backend server to avoid CORS issues when calling the Anthropic API directly from the browser. The server uses the official Anthropic SDK for secure, reliable API communication.
+- **Development**: Uses local Express server (`/server`) to avoid CORS issues
+- **Production**: Uses Vercel serverless functions for automatic scaling
+- **Both**: Use official Anthropic SDK for secure, reliable API communication
 
 ## 🎯 How to Use
 
@@ -150,31 +154,58 @@ The app uses browser localStorage, so no environment variables are needed for ba
 
 ## 🚀 Deployment
 
-### Deploy to Vercel (Recommended)
+### Deploy to Vercel (Recommended) - 2 Minutes Setup!
 
-1. **Push to GitHub**
+Vercel provides the easiest deployment with automatic serverless functions and **no environment variables needed**.
+
+#### Prerequisites
+- GitHub account
+- Vercel account (free at [vercel.com](https://vercel.com))
+
+#### Step-by-Step Deployment
+
+1. **Push your code to GitHub** (if not already done)
    ```bash
    git add .
-   git commit -m "Initial commit"
+   git commit -m "Ready for deployment"
    git push origin main
    ```
 
 2. **Deploy to Vercel**
-   - Go to vercel.com
+   - Go to [vercel.com](https://vercel.com)
+   - Click "New Project"
    - Import your GitHub repository
-   - Deploy with default settings
-   - Your app will be live in minutes!
+   - Vercel auto-detects it's a Vite app
+   - Click "Deploy"
 
-### Deploy to Netlify
+3. **That's it!** 🎉
+   - Your app will be live in ~2 minutes
+   - You'll get a URL like `https://smart-todo-ai.vercel.app`
+   - Automatic deployments on every push to main
 
-1. **Build the app**
-   ```bash
-   npm run build
-   ```
+#### How Vercel Deployment Works
 
-2. **Deploy**
-   - Drag the `dist` folder to netlify.com/drop
-   - Or connect your GitHub repo for automatic deployments
+- **Frontend**: Static files served by Vercel CDN globally
+- **API**: `/api/claude` becomes a serverless function automatically
+- **CORS**: Handled seamlessly by Vercel infrastructure
+- **Scaling**: Automatic based on usage (0 to millions of users)
+- **Security**: No server-side API key storage needed
+
+#### No Environment Variables Required!
+
+The app is designed for maximum security:
+- ✅ Users enter their Claude API key in the app interface
+- ✅ API keys stored in browser localStorage only
+- ✅ Each user uses their own Claude API quota
+- ✅ No server-side secrets to manage
+
+### Monitoring & Troubleshooting
+
+- **Vercel Dashboard**: View deployment logs and analytics
+- **Health Check**: Visit your-app.vercel.app/api/claude (should return "Method not allowed")
+- **Common Issues**: Check browser console for any CORS or API errors
+
+**🎯 Recommended**: GitHub → Vercel → Live App (2 minutes total)
 
 ## 💡 Tips for Best Results
 
