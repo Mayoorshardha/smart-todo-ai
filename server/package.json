@@ -1,0 +1,20 @@
+{
+  "name": "smart-todo-ai-server",
+  "version": "1.0.0",
+  "description": "Backend proxy server for Smart Todo AI",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "@anthropic-ai/sdk": "^0.24.3",
+    "dotenv": "^16.4.5"
+  },
+  "keywords": ["todo", "ai", "claude", "proxy"],
+  "author": "Mayoor Shardha",
+  "license": "MIT"
+}

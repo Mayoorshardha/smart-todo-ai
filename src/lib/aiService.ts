@@ -1,6 +1,7 @@
 import type { AIServiceInterface, AICategorizationResult, AISuggestionsResult, UserProfile, SuggestionContext } from '../types';
 
-const CLAUDE_API_URL = 'https://api.anthropic.com/v1/messages';
+// Use local server proxy to avoid CORS issues
+const CLAUDE_API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api/claude';
 
 export class AIService implements AIServiceInterface {
   private apiKey: string;

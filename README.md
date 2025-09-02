@@ -44,26 +44,40 @@ A modern, AI-powered todo application built with React, TypeScript, and Claude A
    cd smart-todo-ai
    ```
 
-2. **Install dependencies**
+2. **Install frontend dependencies**
    ```bash
    npm install
    ```
 
-3. **Start development server**
+3. **Install server dependencies**
+   ```bash
+   cd server
+   npm install
+   cd ..
+   ```
+
+4. **Start the backend server**
+   ```bash
+   cd server
+   npm start
+   ```
+   Server will run on `http://localhost:3001`
+
+5. **Start the frontend (in a new terminal)**
    ```bash
    npm run dev
    ```
+   App will run on `http://localhost:5173`
 
-4. **Open in browser**
-   ```
-   http://localhost:5173
-   ```
-
-5. **Get your Claude API key**
-   - Visit console.anthropic.com
+6. **Get your Claude API key**
+   - Visit [console.anthropic.com](https://console.anthropic.com/)
    - Sign up for free (no credit card required)
    - Create an API key
    - Add it in the app interface
+
+### Why Two Servers?
+
+The app uses a backend server to avoid CORS issues when calling the Anthropic API directly from the browser. The server uses the official Anthropic SDK for secure, reliable API communication.
 
 ## 🎯 How to Use
 
