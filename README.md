@@ -7,20 +7,49 @@ A modern, AI-powered todo application built with React, TypeScript, and Claude A
 - **AI-Powered Categorization**: Automatically categorizes tasks using Claude AI
 - **Smart Suggestions**: Personalized task recommendations based on your patterns
 - **User Profiles**: Customize categories, routine tasks, and priority keywords
-- **Responsive Design**: Works perfectly on desktop and mobile
-- **TypeScript**: Full type safety and excellent developer experience
-- **Local Storage**: No backend required, data stored locally
-- **Free to Use**: Uses Claude's free tier (1000 messages/month)
 
 ## 🚀 Live Demo
 
-[Deploy to Vercel in 2 minutes](https://vercel.com/new/clone?repository-url=https://github.com/Mayoorshardha/smart-todo-ai) 
+**🌐 [Try it now: https://smart-todo-ai-nine.vercel.app/](https://smart-todo-ai-nine.vercel.app/)**
 
-*Click the button above to deploy your own instance instantly!*
+## 🎯 How to Use
 
-## 📸 Screenshots
+### 1. Setup Your Profile
+- Add your name and work hours
+- Define custom categories for your workflow
+- List routine tasks you do regularly
+- Set priority keywords that matter to you
 
-![Smart Todo App](./docs/screenshot.png)
+### 2. Add Tasks
+- Simply type your task and press Enter
+- AI will automatically categorize and prioritize it
+- Context from your profile makes suggestions more accurate
+
+### 3. Smart Suggestions
+- AI suggests relevant tasks based on:
+  - Your completion patterns
+  - Time of day
+  - Your routine tasks
+  - Current incomplete tasks
+
+### 4. Stay Organized
+- Tasks are color-coded by category and priority
+- See AI reasoning by hovering over the AI badge
+- Mark tasks complete with satisfaction!
+
+## 🎨 Customization
+
+### Adding Custom Categories
+The app supports unlimited custom categories. Add them in your profile:
+- Work-related: "Client Work", "Admin Tasks"
+- Personal: "Side Projects", "Learning"
+- Life: "Errands", "Household"
+
+### Priority Keywords
+Set words that automatically make tasks high priority:
+- "deadline", "urgent", "meeting"
+- "client", "presentation", "call"
+- Customize based on your work style
 
 ## 🛠️ Tech Stack
 
@@ -31,7 +60,35 @@ A modern, AI-powered todo application built with React, TypeScript, and Claude A
 - **Deployment**: Vercel
 - **Icons**: Lucide React
 
-## 🏃‍♂️ Quick Start
+## 🔧 Development
+
+### Project Structure
+
+```
+src/
+├── components/          # React components
+│   ├── ApiKeySetup.tsx
+│   ├── UserProfile.tsx
+│   └── SmartSuggestions.tsx
+├── hooks/              # Custom React hooks
+│   └── useLocalStorage.ts
+├── lib/                # Utilities and services
+│   ├── aiService.ts
+│   └── utils.ts
+├── types/              # TypeScript type definitions
+│   └── index.ts
+├── App.tsx             # Main app component
+└── main.tsx           # App entry point
+```
+
+### Available Scripts
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+
+### Environment Setup
+The app uses browser localStorage, so no environment variables are needed for basic functionality.
 
 ### Prerequisites
 
@@ -83,105 +140,12 @@ A modern, AI-powered todo application built with React, TypeScript, and Claude A
 - **Production**: Uses Vercel serverless functions for automatic scaling
 - **Both**: Use official Anthropic SDK for secure, reliable API communication
 
-## 🎯 How to Use
-
-### 1. Setup Your Profile
-- Add your name and work hours
-- Define custom categories for your workflow
-- List routine tasks you do regularly
-- Set priority keywords that matter to you
-
-### 2. Add Tasks
-- Simply type your task and press Enter
-- AI will automatically categorize and prioritize it
-- Context from your profile makes suggestions more accurate
-
-### 3. Smart Suggestions
-- AI suggests relevant tasks based on:
-  - Your completion patterns
-  - Time of day
-  - Your routine tasks
-  - Current incomplete tasks
-
-### 4. Stay Organized
-- Tasks are color-coded by category and priority
-- See AI reasoning by hovering over the AI badge
-- Mark tasks complete with satisfaction!
-
-## 🎨 Customization
-
-### Adding Custom Categories
-The app supports unlimited custom categories. Add them in your profile:
-- Work-related: "Client Work", "Admin Tasks"
-- Personal: "Side Projects", "Learning"
-- Life: "Errands", "Household"
-
-### Priority Keywords
-Set words that automatically make tasks high priority:
-- "deadline", "urgent", "meeting"
-- "client", "presentation", "call"
-- Customize based on your work style
-
-## 🔧 Development
-
-### Project Structure
-
-```
-src/
-├── components/          # React components
-│   ├── ApiKeySetup.tsx
-│   ├── UserProfile.tsx
-│   └── SmartSuggestions.tsx
-├── hooks/              # Custom React hooks
-│   └── useLocalStorage.ts
-├── lib/                # Utilities and services
-│   ├── aiService.ts
-│   └── utils.ts
-├── types/              # TypeScript type definitions
-│   └── index.ts
-├── App.tsx             # Main app component
-└── main.tsx           # App entry point
-```
-
-### Available Scripts
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
-
-### Environment Setup
-The app uses browser localStorage, so no environment variables are needed for basic functionality.
 
 ## 🚀 Deployment
 
 ### Deploy to Vercel (Recommended) - 2 Minutes Setup!
 
-Vercel provides the easiest deployment with automatic serverless functions and **no environment variables needed**.
-
-#### Prerequisites
-- GitHub account
-- Vercel account (free at [vercel.com](https://vercel.com))
-
-#### Step-by-Step Deployment
-
-1. **Push your code to GitHub** (if not already done)
-   ```bash
-   git add .
-   git commit -m "Ready for deployment"
-   git push origin main
-   ```
-
-2. **Deploy to Vercel**
-   - Go to [vercel.com](https://vercel.com)
-   - Click "New Project"
-   - Import your GitHub repository
-   - Vercel auto-detects it's a Vite app
-   - Click "Deploy"
-
-3. **That's it!** 🎉
-   - Your app will be live in ~2 minutes
-   - You'll get a URL like `https://smart-todo-ai.vercel.app`
-   - Automatic deployments on every push to main
+[Deploy to Vercel in 2 minutes](https://vercel.com/new/clone?repository-url=https://github.com/Mayoorshardha/smart-todo-ai) 
 
 #### How Vercel Deployment Works
 
